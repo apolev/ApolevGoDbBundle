@@ -1,0 +1,20 @@
+{
+    "name": "apolev/go-db-bundle",
+    "type": "symfony-bundle",
+    "description": "go-db integration for your symfony project",
+    "keywords": ["go-db", "godb", "symfony"],
+    "homepage": "https://github.com/apolev/GoDbBundle",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4",
+        "go/db": ">=2.2.2",
+        "symfony/framework-bundle": "~2.6"
+    },
+    "authors": [
+        { "name": "contributors", "homepage": "https://github.com/apolev/GoDbBundle/contributors" }
+    ],
+    "autoload": {
+        "psr-0": { "Apolev\\GoDbBundle": "" }
+    },
+    "target-dir": "Apolev/GoDbBundle"
+}
