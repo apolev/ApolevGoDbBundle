@@ -8,6 +8,6 @@ class ApolevGoDbBundle extends Bundle
 {
     public function boot()
     {
-
+        \go\DB\autoloadRegister();
     }
 }
