@@ -6,9 +6,9 @@
     "homepage": "https://github.com/apolev/GoDbBundle",
     "license": "MIT",
     "require": {
-        "php": ">=5.4",
+        "php": ">=5.6",
         "go/db": ">=2.2.2",
-        "symfony/framework-bundle": "~2.6"
+        "symfony/framework-bundle": "~3.0"
     },
     "authors": [
         { "name": "contributors", "homepage": "https://github.com/apolev/GoDbBundle/contributors" }
