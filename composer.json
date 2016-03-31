@@ -10,6 +10,9 @@
         "go/db": ">=2.2.2",
         "symfony/framework-bundle": "~3.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "5.2.*"
+    },
     "authors": [
         { "name": "contributors", "homepage": "https://github.com/apolev/GoDbBundle/contributors" }
     ],
