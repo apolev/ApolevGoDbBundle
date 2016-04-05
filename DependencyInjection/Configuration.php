@@ -19,11 +19,11 @@ class Configuration implements ConfigurationInterface
         $prototype->useAttributeAsKey('name');
 
         $connectionBuilder = $prototype->children();
-        $connectionBuilder->arrayNode('_adapter')
+        $connectionBuilder->enumNode('_adapter')
             ->isRequired()
-            ->useAttributeAsKey('name')
+            ->values(['pgsql', 'mysql', 'mysqlold', 'pgsql', 'sqlite'])
             ->cannotBeEmpty()
-            ->info('Database adapter parameters')
+            ->info('Database adapter')
         ->end();
 
         $connectionBuilder->scalarNode('_lazy')->defaultTrue()->cannotBeEmpty()->info('Initialize connection only when first request will be sent.')->end();
