@@ -22,7 +22,7 @@ class ApolevGoDbBundle extends Bundle
                 $db = DB::create($parameters);
                 $storage->set($db, $name);
 
-                if (!empty($parameters['inject_to_container'])) {
+                if (!empty($parameters['_inject_to_container'])) {
                     $id = 'godb_' . $name;
                     $this->container->set($id, $db);
                 }
