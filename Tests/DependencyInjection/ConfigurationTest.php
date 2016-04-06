@@ -14,8 +14,9 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
         $this->configuration = new Configuration;
     }
 
-    public function testErrors()
+    public function testBuild()
     {
-
+        $treeBuilder = $this->configuration->getConfigTreeBuilder();
+        $treeBuilder->buildTree();
     }
 }

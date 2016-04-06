@@ -14,10 +14,11 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder;
         $rootNode    = $treeBuilder->root('godb');
+        $rootNode->useAttributeAsKey('name');
 
         /** @var NodeDefinition|ArrayNodeDefinition $prototype */
         $prototype = $rootNode->prototype('array');
-        $prototype->useAttributeAsKey('name');
+
 
         $connectionBuilder = $prototype->children();
         $connectionBuilder->enumNode('_adapter')
