@@ -13,9 +13,9 @@ class ApolevGoDbBundle extends Bundle
         \go\DB\autoloadRegister();
 
         $storage = new Storage();
-        $this->container->set('godb.storage', $storage);
+        $this->container->set('apolev_godb.storage', $storage);
 
-        $databases = $this->container->getParameter('godb');
+        $databases = $this->container->getParameter('apolev_godb');
 
         if ($databases) {
             foreach ($databases as $name => $parameters) {
@@ -23,7 +23,7 @@ class ApolevGoDbBundle extends Bundle
                 $storage->set($db, $name);
 
                 if (!empty($parameters['_inject_to_container'])) {
-                    $id = 'godb_' . $name;
+                    $id = 'apolev_godb_' . $name;
                     $this->container->set($id, $db);
                 }
             }
